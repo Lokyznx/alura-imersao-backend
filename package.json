@@ -1,0 +1,41 @@
+{
+  "name": "Imersão-dev-backend",
+  "version": "1.0.0",
+  "description": "Projeto backend para a imersão Alura",
+  "main": "server.js",
+  "type": "module",
+  "license": "AGPL-version-3.0",
+  "private": false,
+  "engines": {
+    "node": ">= 14.0.0",
+    "npm": ">= 6.0.0"
+  },
+  "homepage": "https://github.com/Lokyznx/alura-imersao-backend#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lokyznx/alura-imersao-backend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Lokyznx/alura-imersao-backend/issues"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "backend",
+    "imersao-alura"
+  ],
+  "author": {
+    "name": "Lokyznx",
+    "email": "taylonrimolo@gmail.com",
+    "url": "https://github.com/Lokyznx"
+  },
+  "contributors": [],
+  "scripts": {
+    "dev": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^4.21.1"
+  },
+  "devDependencies": {}
+}
