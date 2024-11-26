@@ -1,3 +1,4 @@
+
 {
   "name": "Imersão-dev-backend",
   "version": "1.0.0",
@@ -31,11 +32,11 @@
   },
   "contributors": [],
   "scripts": {
-    "dev": "nodemon server.js",
+    "dev": "node --watch --env-file=.env server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "express": "^4.21.1"
-  },
-  "devDependencies": {}
+    "express": "^4.21.1",
+    "mongodb": "^6.11.0"
+  }
 }
