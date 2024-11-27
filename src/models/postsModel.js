@@ -1,5 +1,8 @@
+import 'dotenv/config';
 import conectarAoBanco from "../config/dbConfig.js";
-
+import {
+  ObjectId
+} from "mongodb";
 // Conecta ao banco de dados utilizando a string de conexão fornecida
 const conexao = await conectarAoBanco(process.env.STRING_CONEXAO);
 
@@ -11,4 +14,20 @@ export async function getTodosPosts() {
   const colecao = db.collection("posts");
   // Retorna todos os documentos da coleção como um array
   return colecao.find().toArray();
+}
+
+export async function criarPost(novoPost) {
+  const db = conexao.db("Imersao-instabytes")
+  const colecao = db.collection("posts")
+  return colecao.insertOne(novoPost)
+}
+
+export async function atualizarPost(id, novoPost) {
+  const db = conexao.db("Imersao-instabytes");
+  const colecao = db.collection("posts")
+  const objID = ObjectId.createFromHexString(id)
+  return colecao.updateOne({
+    _id: new ObjectId(objID)}, {
+    $set: novoPost
+  });
 }
